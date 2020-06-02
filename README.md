@@ -1,2 +1,2 @@
-# react-spa-boilerplate
-Boilerplate for React Client Side Rendering Single Page Applications 2020 June
+# mockup-maker-spa
+Single page application for mockup maker editor

@@ -1,0 +1,110 @@
+{
+  "name": "mockup-maker-spa",
+  "version": "1.0.0",
+  "description": "Mockup Maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --no-cache",
+    "flow": "./node_modules/.bin/flow",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "start": "webpack-dev-server --config webpack.config.js --mode development",
+    "build-test": "DEPLOY=true NODE_ENV='development' webpack --config webpack.config.js --mode development",
+    "build-prod": "NODE_ENV='production' webpack --config webpack.config.js --mode production",
+    "update-version": "node ./scripts/updateVersion",
+    "upload-prod": "node ./scripts/uploadProd",
+    "publish-test": "npm run build-test && node ./scripts/uploadTest.js",
+    "publish-stage": "./scripts/publishStage.sh",
+    "publish-prod": "npm run update-version && npm run build-prod && npm run upload-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renderforest/mockup-maker-spa.git"
+  },
+  "author": "Renderforest LLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renderforest/mockup-maker-spa/issues"
+  },
+  "homepage": "https://github.com/renderforest/mockup-maker-spa#readme",
+  "browserslist": [
+    "> 1%",
+    "ie > 9"
+  ],
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "core"
+    ],
+    "moduleNameMapper": {
+      "^core": "<rootDir>",
+      "^selectors": "<rootDir>/core/selectors",
+      "^redux": "<rootDir>/core/redux"
+    },
+    "testMatch": [
+      "<rootDir>/**/**/**/**/*.spec.js",
+      "<rootDir>/**/**/**/*.spec.js",
+      "<rootDir>/**/**/*.spec.js",
+      "<rootDir>/**/*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "@renderforest/rf-ui-library": "1.0.351",
+    "@renderforest/icons": "^1.0.10",
+    "immer": "4.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-color": "2.17.3",
+    "react-redux": "7.1.1",
+    "react-spring": "^8.0.27",
+    "redux": "4.0.4",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0",
+    "styled-components": "4.4.0",
+    "lodash.debounce": "^4.0.8",
+    "whatwg-fetch": "3.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "2.347.0",
+    "@babel/core": "7.4.5",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-transform-flow-strip-types": "7.4.4",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-flow": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "@sentry/browser": "4.6.6",
+    "@svgr/webpack": "^5.2.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.2",
+    "babel-loader": "8.0.6",
+    "babel-plugin-dynamic-import-node": "2.3.0",
+    "babel-plugin-inline-react-svg": "1.1.0",
+    "babel-plugin-module-resolver": "3.2.0",
+    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-preset-env": "1.7.0",
+    "eslint": "6.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-loader": "3.0.0",
+    "eslint-plugin-flowtype": "4.2.0",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jasmine": "2.10.1",
+    "eslint-plugin-jest": "22.7.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-hooks": "2.0.1",
+    "flow-bin": "0.106.1",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "madge": "3.4.4",
+    "path": "0.12.7",
+    "prettier": "1.18.2",
+    "react-svg-loader": "3.0.3",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5",
+    "webpack-dev-server": "3.7.2",
+    "ssh2-sftp-client": "^4.2.2"
+  }
+}

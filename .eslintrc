@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "react/display-name": 0,
+    "react-hooks/rules-of-hooks": "error"
+    //   "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "GLOBALS": false,
+    "configure": false,
+    "localDevBackend": false,
+    "mount": false,
+    "React": false,
+    "render": false,
+    "shallow": false
+  },
+  "plugins": ["react", "flowtype", "prettier", "react-hooks"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "es6": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}

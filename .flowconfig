@@ -1,0 +1,13 @@
+[ignore]
+
+[include]
+**/types.js
+
+[libs]
+./src/flow-typed
+
+[lints]
+
+[options]
+
+[strict]
