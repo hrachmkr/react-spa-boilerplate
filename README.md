@@ -1,2 +1,3 @@
-# mockup-maker-spa
-Single page application for mockup maker editor
+# React SPA Boilerplate
+
+React Client Side Rendering SPA boilerplate
